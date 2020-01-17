@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Collection框架</title>
+    <url>/2020/01/17/Collection%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　关于Collection框架的学习，在Java课程里面对于一些基础知识并不是很了解，尤其是对Collection框架基本没听过，借着这次寒假的Java学习好好学一些这个框架。</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="Collection框架定义"><a href="#Collection框架定义" class="headerlink" title="Collection框架定义"></a>Collection框架定义</h2><hr>
+]]></content>
+      <categories>
+        <category>Java学习</category>
+      </categories>
+      <tags>
+        <tag>-Collection框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习入门</title>
+    <url>/2020/01/16/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　深度学习之神经网络结构，梯度下降算法，及反向传播。</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="神经网络和多元一次函数的联系"><a href="#神经网络和多元一次函数的联系" class="headerlink" title="神经网络和多元一次函数的联系"></a>神经网络和多元一次函数的联系</h2><p>　　我认为多元一次函数就是一种神经网络。神经网络中：输入层-&gt;处理层-&gt;输出层，就相当于多元一次函数中：多个变量x经过函数得到结果y。</p>
+<hr>
+<h2 id="神经网络中的可训练参数"><a href="#神经网络中的可训练参数" class="headerlink" title="神经网络中的可训练参数"></a>神经网络中的可训练参数</h2><p>权重，偏置值</p>
+<hr>
+<h2 id="梯度下降的优势"><a href="#梯度下降的优势" class="headerlink" title="梯度下降的优势"></a>梯度下降的优势</h2><p>　　应该是简化了计算吧。最小二乘法就是直接求多元函数极值，求偏导，让偏导为零，解方程组，当变量有非常多个元素时，其计算量就变得非常大了，梯度下降法可以看作是解该方程组的简化，它只需要一个反复迭代的式子，沿着梯度下降，就可以求出其极值。</p>
+<hr>
+<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><p>　　神经网络训练就是对权重和偏执值进行调整，直到到达一个最优结果，那么最初的权重和偏执值如何设定，都从零开始？</p>
+<p>　　看了很多遍视频，还是看不懂，所以也没啥疑惑，只有不懂。。。</p>
+<p>　　比如如何微调参数，梯度方向如何确定等</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>我的第一篇博客</title>
     <url>/2020/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　第一次写博客，还在学习使用markdown，边学边用吧。本人不是什么大牛，就是一个普通一本里面的普通学生，所以我写的博客也并不是什么高深技术探讨，多半是对知识的总结、对学习过程的感想，也会有一些实际操作的记录。</p>
 <a id="more"></a>
 
 <h2 id="为什么写博客"><a href="#为什么写博客" class="headerlink" title="为什么写博客"></a>为什么写博客</h2><p>　　想写博客这个东西，最初应该来自自己的虚荣心吧，当时看着好多大佬都在写博客，我也就想试试，虽然在内容上赶不上他们，不过在形式上跟他们同步吧，所以就打算在寒假正式开始我的博客之路。其次，我自身感受到写博客的重要性，在这一年半的大学生活中，安装了一些专业应用，配置过一些环境，不过随着时间的推移，大多数的步骤已经忘，用的时候又得去搜别人写得，很麻烦。然后，我觉得写博客也是对自己生活的一种记录吧，等多年以后，再回想过往，也不至于那么碌碌无为。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>哎，第一次写博客，一开始觉得有好多东西要写，可是写着写着就完了，卑微….。不过坚信写着写着就会好的，为自己加油！</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>　　哎，第一次写博客，一开始觉得有好多东西要写，可是写着写着就完了，卑微….。不过坚信写着写着就会好的，为自己加油！</p>
 ]]></content>
       <categories>
         <category>随笔</category>
