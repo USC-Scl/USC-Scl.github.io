@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Personal Blog">
 <meta property="og:description" content="前言　　关于Collection框架的学习，在Java课程里面对于一些基础知识并不是很了解，尤其是对Collection框架基本没听过，借着这次寒假的Java学习好好学一些这个框架。">
 <meta property="article:published_time" content="2020-01-17T12:12:45.000Z">
-<meta property="article:modified_time" content="2020-01-17T15:34:21.453Z">
+<meta property="article:modified_time" content="2020-01-19T06:24:53.702Z">
 <meta property="article:author" content="沈春龙">
 <meta property="article:tag" content="-Collection框架">
 <meta name="twitter:card" content="summary">
@@ -387,6 +387,96 @@
 
 <hr>
 <h2 id="Collection框架定义"><a href="#Collection框架定义" class="headerlink" title="Collection框架定义"></a>Collection框架定义</h2><hr>
+<h2 id="List定义与用法"><a href="#List定义与用法" class="headerlink" title="List定义与用法"></a>List定义与用法</h2><hr>
+<h2 id="Set定义与用法"><a href="#Set定义与用法" class="headerlink" title="Set定义与用法"></a>Set定义与用法</h2><hr>
+<h2 id="Map定义与用法"><a href="#Map定义与用法" class="headerlink" title="Map定义与用法"></a>Map定义与用法</h2><blockquote>
+<p>以键-值存储元素的容器，根据关键字(key)找到对应的数据</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">V put(key,value)</td>
+<td>将一个键/值映射放入图中</td>
+</tr>
+<tr>
+<td align="left">V get(key)</td>
+<td>根据键获取对应的value值</td>
+</tr>
+<tr>
+<td align="left">Set<K> keySet()</td>
+<td>返回包含键的规则集</td>
+</tr>
+<tr>
+<td align="left">Collection<V> values()</td>
+<td>返回包含值得集合</td>
+</tr>
+<tr>
+<td align="left">boolean containsKey(key)</td>
+<td>返回图中是否包含键值key</td>
+</tr>
+<tr>
+<td align="left">Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</td>
+<td>返回一个图中包含条目的规则集</td>
+</tr>
+<tr>
+<td align="left">int size()</td>
+<td>返回途中的键值对个数</td>
+</tr>
+<tr>
+<td align="left">V remove(key)</td>
+<td>删除指定键对应的条目</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>其主要子类及其用途</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>子类</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HashMap</td>
+<td>查询、插入和删除比较高效</td>
+</tr>
+<tr>
+<td>LinkedHashMap</td>
+<td>支持元素的排序</td>
+</tr>
+<tr>
+<td>TreeMap</td>
+<td>遍历有序的键值时非常高效、</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td>一般用于操作属性文件</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Map三种遍历方式</p>
+</blockquote>
+<ul>
+<li>通过Map.keySet遍历key,通过key取出对应的value（比较常用，需要二次取值）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String key : treeMap.keySet())&#123;</span><br><span class="line">    System.out.println(key + <span class="string">"--"</span> + treeMap.get(key));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过Map.entrySet使用迭代器遍历key和value（不常用，代码复杂）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;Map.Entry&lt;String, Integer&gt;&gt; entrySet = treeMap.entrySet();</span><br><span class="line">Iterator&lt;Map.Entry&lt;String, Integer&gt;&gt; entrySetIt = entrySet.iterator();</span><br><span class="line"><span class="keyword">while</span>(entrySetIt.hasNext())&#123;</span><br><span class="line">    Map.Entry&lt;String, Integer&gt; entry = entrySetIt.next();</span><br><span class="line">    System.out.println(entry.getKey() + <span class="string">"--"</span> + entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>直接遍历Map.entrySet集合9（容量大时，使用此方法）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Entry&lt;String, Integer&gt; entry : treeMap.entrySet())&#123;</span><br><span class="line">    System.out.println(entry.getKey() + <span class="string">"--"</span> + entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -427,8 +517,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/18/Collection/" rel="prev" title="Collection">
-                Collection <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/18/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E2%80%94%E4%BD%9C%E4%B8%9A%E4%B8%89%EF%BC%88%E5%AF%92%E5%81%87%EF%BC%89/" rel="prev" title="Java学习————作业三（寒假）">
+                Java学习————作业三（寒假） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -510,7 +600,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -587,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection框架定义"><span class="nav-number">2.</span> <span class="nav-text">Collection框架定义</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection框架定义"><span class="nav-number">2.</span> <span class="nav-text">Collection框架定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List定义与用法"><span class="nav-number">3.</span> <span class="nav-text">List定义与用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set定义与用法"><span class="nav-number">4.</span> <span class="nav-text">Set定义与用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map定义与用法"><span class="nav-number">5.</span> <span class="nav-text">Map定义与用法</span></a></li></ol></div>
             
 
           </div>

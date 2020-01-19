@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="-Collection框架," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="第一题：Queue通常用于操作存储一组队列方式的对象信息 ，一般存储方式为先进先出。 其几种特殊方法：  Booleanoffer（element）   向队列中插入一个元素（类似add方法）。 E poll()    获取并删除队列头元素。为空则返回null。 E remove()   获取并删除队列头元素，为空则返回异常。 E peek()   获取但不删除列头元素，如果队列为空返回null。">
+<meta name="description" content="概述set,list,queue集合的使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20184350135 沈春龙 作业三">
-<meta property="og:url" content="http://yoursite.com/2020/01/18/20184350135%20%E6%B2%88%E6%98%A5%E9%BE%99%20%E4%BD%9C%E4%B8%9A%E4%B8%89/index.html">
+<meta property="og:title" content="Java学习————作业三（寒假）">
+<meta property="og:url" content="http://yoursite.com/2020/01/18/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E2%80%94%E4%BD%9C%E4%B8%9A%E4%B8%89%EF%BC%88%E5%AF%92%E5%81%87%EF%BC%89/index.html">
 <meta property="og:site_name" content="Personal Blog">
-<meta property="og:description" content="第一题：Queue通常用于操作存储一组队列方式的对象信息 ，一般存储方式为先进先出。 其几种特殊方法：  Booleanoffer（element）   向队列中插入一个元素（类似add方法）。 E poll()    获取并删除队列头元素。为空则返回null。 E remove()   获取并删除队列头元素，为空则返回异常。 E peek()   获取但不删除列头元素，如果队列为空返回null。">
+<meta property="og:description" content="概述set,list,queue集合的使用">
 <meta property="og:image" content="c:%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200118182243336.png">
-<meta property="og:image" content="c:%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200118165318796.png">
-<meta property="article:published_time" content="2020-01-18T08:44:13.749Z">
-<meta property="article:modified_time" content="2020-01-18T10:22:52.006Z">
+<meta property="article:published_time" content="2020-01-18T11:03:37.000Z">
+<meta property="article:modified_time" content="2020-01-19T05:46:33.834Z">
 <meta property="article:author" content="沈春龙">
+<meta property="article:tag" content="-Collection框架">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200118182243336.png">
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/18/20184350135 沈春龙 作业三/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/18/Java学习———作业三（寒假）/"/>
 
 
 
 
 
-  <title>20184350135 沈春龙 作业三 | Personal Blog</title>
+  <title>Java学习————作业三（寒假） | Personal Blog</title>
   
 
 
@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/18/20184350135%20%E6%B2%88%E6%98%A5%E9%BE%99%20%E4%BD%9C%E4%B8%9A%E4%B8%89/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/18/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E2%80%94%E4%BD%9C%E4%B8%9A%E4%B8%89%EF%BC%88%E5%AF%92%E5%81%87%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沈春龙">
@@ -307,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">20184350135 沈春龙 作业三</h1>
+          <h1 class="post-title" itemprop="name headline">Java学习————作业三（寒假）</h1>
         
 
         <div class="post-meta">
@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-18T16:44:13+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-18T19:03:37+08:00">
                 2020-01-18
               </time>
             
@@ -329,6 +329,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">Java学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -362,7 +384,11 @@
       
 
       
-        <h4 id="第一题："><a href="#第一题：" class="headerlink" title="第一题："></a>第一题：</h4><p>Queue通常用于操作存储一组队列方式的对象信息 ，一般存储方式为先进先出。</p>
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>set,list,queue集合的使用</p>
+<a id="more"></a>
+
+<p>第一题：</p>
+<p>Queue通常用于操作存储一组队列方式的对象信息 ，一般存储方式为先进先出。</p>
 <p>其几种特殊方法：</p>
 <ul>
 <li>Booleanoffer（element）   向队列中插入一个元素（类似add方法）。</li>
@@ -379,14 +405,12 @@
 <li>LinkedQueue</li>
 <li>LinkedList</li>
 </ul>
-<h4 id="第二题："><a href="#第二题：" class="headerlink" title="第二题："></a>第二题：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Collection;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test2</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">50</span>;</span><br><span class="line">		Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">		<span class="comment">//生成五十个不重复随机数存储到set集合</span></span><br><span class="line">		<span class="keyword">while</span>(set.size()&lt;=sum) &#123;</span><br><span class="line">			<span class="keyword">int</span> random = (<span class="keyword">int</span>)(Math.random()*(<span class="number">100</span>));</span><br><span class="line">			set.add(random);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//使用迭代器遍历输出</span></span><br><span class="line">		Iterator&lt;Integer&gt; it1 = set.iterator();</span><br><span class="line">		<span class="keyword">while</span>(it1.hasNext()) &#123;</span><br><span class="line">			System.out.print(it1.next() + <span class="string">","</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		<span class="comment">//三次循环删除最大值</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> max = Collections.max(set);</span><br><span class="line">			set.remove(max);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//使用foreach循环输出</span></span><br><span class="line">		<span class="keyword">for</span>(Integer i : set) &#123;</span><br><span class="line">			  System.out.print(i+<span class="string">","</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Collection;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test2</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">50</span>;</span><br><span class="line">		Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">		<span class="comment">//生成五十个不重复随机数存储到set集合</span></span><br><span class="line">		<span class="keyword">while</span>(set.size()&lt;=sum) &#123;</span><br><span class="line">			<span class="keyword">int</span> random = (<span class="keyword">int</span>)(Math.random()*(<span class="number">100</span>));</span><br><span class="line">			set.add(random);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//使用迭代器遍历输出</span></span><br><span class="line">		Iterator&lt;Integer&gt; it1 = set.iterator();</span><br><span class="line">		<span class="keyword">while</span>(it1.hasNext()) &#123;</span><br><span class="line">			System.out.print(it1.next() + <span class="string">","</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		<span class="comment">//三次循环删除最大值</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> max = Collections.max(set);</span><br><span class="line">			set.remove(max);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//使用foreach循环输出</span></span><br><span class="line">		<span class="keyword">for</span>(Integer i : set) &#123;</span><br><span class="line">			  System.out.print(i+<span class="string">","</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果：</p>
 <p><img src="C:%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200118182243336.png" alt="image-20200118182243336"></p>
-<h4 id="第三题："><a href="#第三题：" class="headerlink" title="第三题："></a>第三题：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Collection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test3</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CharNum</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        Map&lt;Character,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++) &#123;</span><br><span class="line">            <span class="keyword">char</span> ch = str.charAt(i);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(ch&gt;=<span class="string">'a'</span>&amp;&amp;ch&lt;=<span class="string">'z'</span>||ch&gt;=<span class="string">'A'</span>&amp;&amp;ch&lt;=<span class="string">'Z'</span>) &#123;</span><br><span class="line">            	<span class="comment">//判断map集合中是否含有字母，如果有次数加1一，没有就初始化为1。</span></span><br><span class="line">	            <span class="keyword">if</span>(map.containsKey(ch)) &#123;</span><br><span class="line">	                Integer num = map.get(ch);</span><br><span class="line">	                map.put(ch, ++num);</span><br><span class="line">	            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">	                map.put(ch,<span class="number">1</span>);</span><br><span class="line">	            &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//使用foreach循环输出</span></span><br><span class="line">        <span class="keyword">for</span> (Character key : map.keySet()) &#123;</span><br><span class="line">        	Integer value = map.get(key);</span><br><span class="line">        	System.out.println(key+<span class="string">"出现了 "</span>+value+<span class="string">"次"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String str = <span class="string">"Your。future：depends#@￥on your dreams,so go to sleep."</span>;</span><br><span class="line">		CharNum(str);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Collection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test3</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CharNum</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        Map&lt;Character,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++) &#123;</span><br><span class="line">            <span class="keyword">char</span> ch = str.charAt(i);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(ch&gt;=<span class="string">'a'</span>&amp;&amp;ch&lt;=<span class="string">'z'</span>||ch&gt;=<span class="string">'A'</span>&amp;&amp;ch&lt;=<span class="string">'Z'</span>) &#123;</span><br><span class="line">            	<span class="comment">//判断map集合中是否含有字母，如果有次数加1一，没有就初始化为1。</span></span><br><span class="line">	            <span class="keyword">if</span>(map.containsKey(ch)) &#123;</span><br><span class="line">	                Integer num = map.get(ch);</span><br><span class="line">	                map.put(ch, ++num);</span><br><span class="line">	            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">	                map.put(ch,<span class="number">1</span>);</span><br><span class="line">	            &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//使用foreach循环输出</span></span><br><span class="line">        <span class="keyword">for</span> (Character key : map.keySet()) &#123;</span><br><span class="line">        	Integer value = map.get(key);</span><br><span class="line">        	System.out.println(key+<span class="string">"出现了 "</span>+value+<span class="string">"次"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String str = <span class="string">"Your。future：depends#@￥on your dreams,so go to sleep."</span>;</span><br><span class="line">		CharNum(str);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>运行结果：</p>
-<p><img src="C:%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200118165318796.png" alt="image-20200118165318796"></p>
 
       
     </div>
@@ -402,6 +426,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Collection%E6%A1%86%E6%9E%B6/" rel="tag"># -Collection框架</a>
+          
+        </div>
+      
 
       
       
@@ -411,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/18/Collection/" rel="next" title="Collection">
-                <i class="fa fa-chevron-left"></i> Collection
+              <a href="/2020/01/17/Collection%E6%A1%86%E6%9E%B6/" rel="next" title="Collection框架">
+                <i class="fa fa-chevron-left"></i> Collection框架
               </a>
             
           </div>
@@ -500,7 +530,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -577,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一题："><span class="nav-number">1.</span> <span class="nav-text">第一题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二题："><span class="nav-number">2.</span> <span class="nav-text">第二题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三题："><span class="nav-number">3.</span> <span class="nav-text">第三题：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第二题"><span class="nav-number">1.1.</span> <span class="nav-text">第二题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三题"><span class="nav-number">1.2.</span> <span class="nav-text">第三题</span></a></li></ol></li></ol></div>
             
 
           </div>
