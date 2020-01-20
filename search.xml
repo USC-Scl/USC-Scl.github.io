@@ -42,9 +42,86 @@
     <title>Collection框架</title>
     <url>/2020/01/17/Collection%E6%A1%86%E6%9E%B6/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　关于Collection框架的学习，在Java课程里面对于一些基础知识并不是很了解，尤其是对Collection框架基本没听过，借着这次寒假的Java学习好好学一些这个框架。</p>
+<img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/109678/12/4776/330919/5e25dd05E50232686/cf7de3f63cff3d77.jpg" alt="f7de3f63cff3d77.jpg" style="zoom: 50%;" />
+
 <a id="more"></a>
 
-<h2 id="Collection框架定义"><a href="#Collection框架定义" class="headerlink" title="Collection框架定义"></a>Collection框架定义</h2><h2 id="List定义与用法"><a href="#List定义与用法" class="headerlink" title="List定义与用法"></a>List定义与用法</h2><h2 id="Set定义与用法"><a href="#Set定义与用法" class="headerlink" title="Set定义与用法"></a>Set定义与用法</h2><h2 id="Map定义与用法"><a href="#Map定义与用法" class="headerlink" title="Map定义与用法"></a>Map定义与用法</h2><blockquote>
+<h2 id="集合框架介绍"><a href="#集合框架介绍" class="headerlink" title="集合框架介绍"></a>集合框架介绍</h2><blockquote>
+<p>一组存储对象的容器（动态）</p>
+</blockquote>
+<ul>
+<li>Collection接口：存储另一个元素的集合</li>
+<li>Map接口（图）：存储键/值对</li>
+<li>Collections：操作集合的工具类</li>
+</ul>
+<blockquote>
+<p>Collection架构：三种主要类型的集合</p>
+</blockquote>
+<ol>
+<li>Set(规则类)：存储一组不重复的元素</li>
+<li>List(线性表)：存储一个有序集合</li>
+<li>Queue(队列)：存储用先进先出方式处理的对象</li>
+</ol>
+<blockquote>
+<p>Collection接口</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">boolean add(E e);</td>
+<td align="left">向集合中添加元素</td>
+</tr>
+<tr>
+<td align="left">int size();</td>
+<td align="left">返回集合中的元素个数</td>
+</tr>
+<tr>
+<td align="left">void clear();</td>
+<td align="left">删除集合中的所有元素</td>
+</tr>
+<tr>
+<td align="left">boolean remove(Object o);</td>
+<td align="left">从集合删除元素o</td>
+</tr>
+<tr>
+<td align="left">boolean removeAll(Collection&lt;?&gt; c);</td>
+<td align="left">从集合中删除集合c中的所有元素</td>
+</tr>
+<tr>
+<td align="left">boolean retainAll(Collection&lt;?&gt; c);</td>
+<td align="left">保留c和该集合都有的元素（交集）</td>
+</tr>
+<tr>
+<td align="left">boolean addAll(Collection&lt;? extends E&gt; c);</td>
+<td align="left">将集合c中所有元素添加到当前这个集合</td>
+</tr>
+<tr>
+<td align="left">boolean contains(Object o);</td>
+<td align="left">如果该集合包含对象o,返回true</td>
+</tr>
+<tr>
+<td align="left">boolean containsAll(Collection&lt;?&gt; c);</td>
+<td align="left">如果该集合中包含集合c中所有元素，返回true</td>
+</tr>
+<tr>
+<td align="left">boolean isEmpty();</td>
+<td align="left">如果集合不包含任何元素，则返回true</td>
+</tr>
+<tr>
+<td align="left">Iterator<E> iterator();</td>
+<td align="left">返回该集合中元素所有的迭代器</td>
+</tr>
+<tr>
+<td align="left">Object[] toArray();</td>
+<td align="left">返回该集合元素构成的Object数组</td>
+</tr>
+</tbody></table>
+<h2 id="List定义与用法"><a href="#List定义与用法" class="headerlink" title="List定义与用法"></a>List定义与用法</h2><h2 id="Set定义与用法"><a href="#Set定义与用法" class="headerlink" title="Set定义与用法"></a>Set定义与用法</h2><h2 id="Map定义与用法"><a href="#Map定义与用法" class="headerlink" title="Map定义与用法"></a>Map定义与用法</h2><blockquote>
 <p>以键-值存储元素的容器，根据关键字(key)找到对应的数据</p>
 </blockquote>
 <table>
@@ -128,9 +205,11 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Set&lt;Map.Entry&lt;String, Integer&gt;&gt; entrySet = treeMap.entrySet();</span><br><span class="line">Iterator&lt;Map.Entry&lt;String, Integer&gt;&gt; entrySetIt = entrySet.iterator();</span><br><span class="line"><span class="keyword">while</span>(entrySetIt.hasNext())&#123;</span><br><span class="line">    Map.Entry&lt;String, Integer&gt; entry = entrySetIt.next();</span><br><span class="line">    System.out.println(entry.getKey() + <span class="string">"--"</span> + entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>直接遍历Map.entrySet集合9（容量大时，使用此方法）</li>
+<li>直接遍历Map.entrySet集合（容量大时，使用此方法）</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(Entry&lt;String, Integer&gt; entry : treeMap.entrySet())&#123;</span><br><span class="line">    System.out.println(entry.getKey() + <span class="string">"--"</span> + entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
