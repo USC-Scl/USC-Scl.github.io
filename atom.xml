@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Personal Blog</title>
+  
+  <subtitle>随性写博客，一生爱自由</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-01-19T05:46:33.834Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>沈春龙</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java学习————作业三（寒假）</title>
+    <link href="http://yoursite.com/2020/01/18/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E2%80%94%E4%BD%9C%E4%B8%9A%E4%B8%89%EF%BC%88%E5%AF%92%E5%81%87%EF%BC%89/"/>
+    <id>http://yoursite.com/2020/01/18/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E2%80%94%E4%BD%9C%E4%B8%9A%E4%B8%89%EF%BC%88%E5%AF%92%E5%81%87%EF%BC%89/</id>
+    <published>2020-01-18T11:03:37.000Z</published>
+    <updated>2020-01-19T05:46:33.834Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>set,list,queue集合的使用</p><a id="more"></a><p>第一题：</p><p>Queue通常用于操作存储一组队列方式的对象信息 ，一般存储方式为先进先出。</p><p>其几种特殊方法：</p><ul><li>Booleanoffer（element）   向队列中插入一个元素（类似add方法）。</li><li>E poll()    获取并删除队列头元素。为空则返回null。</li><li>E remove()   获取并删除队列头元素，为空则返回异常。</li><li>E peek()   获取但不删除列头元素，如果队列为空返回null。</li><li>E element()   获取但不删除列头元素，如果队列为空抛出异常。</li></ul><p>其主要子类：</p><ul><li>DelayQueue </li><li>PriorityQueue 优先队列，最小值拥有优先级最先删除。</li><li>ArrayQueue 双端队列，集合容量可动态扩展</li><li>LinkedQueue</li><li>LinkedList</li></ul><h4 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Collection;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test2</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> sum = <span class="number">50</span>;</span><br><span class="line">Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line"><span class="comment">//生成五十个不重复随机数存储到set集合</span></span><br><span class="line"><span class="keyword">while</span>(set.size()&lt;=sum) &#123;</span><br><span class="line"><span class="keyword">int</span> random = (<span class="keyword">int</span>)(Math.random()*(<span class="number">100</span>));</span><br><span class="line">set.add(random);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用迭代器遍历输出</span></span><br><span class="line">Iterator&lt;Integer&gt; it1 = set.iterator();</span><br><span class="line"><span class="keyword">while</span>(it1.hasNext()) &#123;</span><br><span class="line">System.out.print(it1.next() + <span class="string">","</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println();</span><br><span class="line"><span class="comment">//三次循环删除最大值</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++) &#123;</span><br><span class="line"><span class="keyword">int</span> max = Collections.max(set);</span><br><span class="line">set.remove(max);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用foreach循环输出</span></span><br><span class="line"><span class="keyword">for</span>(Integer i : set) &#123;</span><br><span class="line">  System.out.print(i+<span class="string">","</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><p><img src="C:%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200118182243336.png" alt="image-20200118182243336"></p><h4 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Collection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test3</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CharNum</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        Map&lt;Character,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++) &#123;</span><br><span class="line">            <span class="keyword">char</span> ch = str.charAt(i);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(ch&gt;=<span class="string">'a'</span>&amp;&amp;ch&lt;=<span class="string">'z'</span>||ch&gt;=<span class="string">'A'</span>&amp;&amp;ch&lt;=<span class="string">'Z'</span>) &#123;</span><br><span class="line">            <span class="comment">//判断map集合中是否含有字母，如果有次数加1一，没有就初始化为1。</span></span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(ch)) &#123;</span><br><span class="line">                Integer num = map.get(ch);</span><br><span class="line">                map.put(ch, ++num);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                map.put(ch,<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//使用foreach循环输出</span></span><br><span class="line">        <span class="keyword">for</span> (Character key : map.keySet()) &#123;</span><br><span class="line">        Integer value = map.get(key);</span><br><span class="line">        System.out.println(key+<span class="string">"出现了 "</span>+value+<span class="string">"次"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">String str = <span class="string">"Your。future：depends#@￥on your dreams,so go to sleep."</span>;</span><br><span class="line">CharNum(str);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;set,list,queue集合的使用&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java学习" scheme="http://yoursite.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="-Collection框架" scheme="http://yoursite.com/tags/Collection%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Collection框架</title>
+    <link href="http://yoursite.com/2020/01/17/Collection%E6%A1%86%E6%9E%B6/"/>
+    <id>http://yoursite.com/2020/01/17/Collection%E6%A1%86%E6%9E%B6/</id>
+    <published>2020-01-17T12:12:45.000Z</published>
+    <updated>2020-01-21T13:16:22.429Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　关于Collection框架的学习，在Java课程里面对于一些基础知识并不是很了解，尤其是对Collection框架基本没听过，借着这次寒假的Java学习好好学一些这个框架。</p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/109678/12/4776/330919/5e25dd05E50232686/cf7de3f63cff3d77.jpg" alt="f7de3f63cff3d77.jpg" style="zoom: 50%;" /><a id="more"></a><h2 id="集合框架介绍"><a href="#集合框架介绍" class="headerlink" title="集合框架介绍"></a>集合框架介绍</h2><blockquote><p>一组存储对象的容器（动态）</p></blockquote><ul><li>Collection接口：存储另一个元素的集合</li><li>Map接口（图）：存储键/值对</li><li>Collections：操作集合的工具类</li></ul><p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/106429/15/11149/14536/5e26f57dEd507bb53/45d0205b45e872ab.png" alt=""></p><h2 id="Collection接口："><a href="#Collection接口：" class="headerlink" title="Collection接口："></a>Collection接口：</h2><blockquote><p>Collection接口</p></blockquote><table><thead><tr><th align="left">方法</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">boolean add(E e);</td><td align="left">向集合中添加元素</td></tr><tr><td align="left">int size();</td><td align="left">返回集合中的元素个数</td></tr><tr><td align="left">void clear();</td><td align="left">删除集合中的所有元素</td></tr><tr><td align="left">boolean remove(Object o);</td><td align="left">从集合删除元素o</td></tr><tr><td align="left">boolean removeAll(Collection&lt;?&gt; c);</td><td align="left">从集合中删除集合c中的所有元素</td></tr><tr><td align="left">boolean retainAll(Collection&lt;?&gt; c);</td><td align="left">保留c和该集合都有的元素（交集）</td></tr><tr><td align="left">boolean addAll(Collection&lt;? extends E&gt; c);</td><td align="left">将集合c中所有元素添加到当前这个集合</td></tr><tr><td align="left">boolean contains(Object o);</td><td align="left">如果该集合包含对象o,返回true</td></tr><tr><td align="left">boolean containsAll(Collection&lt;?&gt; c);</td><td align="left">如果该集合中包含集合c中所有元素，返回true</td></tr><tr><td align="left">boolean isEmpty();</td><td align="left">如果集合不包含任何元素，则返回true</td></tr><tr><td align="left">Iterator<E> iterator();</td><td align="left">返回该集合中元素所有的迭代器</td></tr><tr><td align="left">Object[] toArray();</td><td align="left">返回该集合元素构成的Object数组</td></tr></tbody></table><blockquote><p>三种主要子类</p></blockquote><ol><li>Set(规则类)：存储一组不重复的元素</li><li>List(线性表)：存储一个有序集合</li><li>Queue(队列)：存储用先进先出方式处理的对象</li></ol><p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/93364/28/11071/50049/5e26f726Eddd8eba4/e3c91e51833f020b.png" alt=""></p><h3 id="List定义与用法"><a href="#List定义与用法" class="headerlink" title="List定义与用法"></a>List定义与用法</h3><h3 id="Set定义与用法"><a href="#Set定义与用法" class="headerlink" title="Set定义与用法"></a>Set定义与用法</h3><h2 id="Map定义与用法"><a href="#Map定义与用法" class="headerlink" title="Map定义与用法"></a>Map定义与用法</h2><blockquote><p>以键-值存储元素的容器，根据关键字(key)找到对应的数据</p></blockquote><table><thead><tr><th align="left">方法</th><th>描述</th></tr></thead><tbody><tr><td align="left">V put(key,value)</td><td>将一个键/值映射放入图中</td></tr><tr><td align="left">V get(key)</td><td>根据键获取对应的value值</td></tr><tr><td align="left">Set<K> keySet()</td><td>返回包含键的规则集</td></tr><tr><td align="left">Collection<V> values()</td><td>返回包含值得集合</td></tr><tr><td align="left">boolean containsKey(key)</td><td>返回图中是否包含键值key</td></tr><tr><td align="left">Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</td><td>返回一个图中包含条目的规则集</td></tr><tr><td align="left">int size()</td><td>返回途中的键值对个数</td></tr><tr><td align="left">V remove(key)</td><td>删除指定键对应的条目</td></tr></tbody></table><blockquote><p>其主要子类及其用途</p></blockquote><table><thead><tr><th>子类</th><th>描述</th></tr></thead><tbody><tr><td>HashMap</td><td>查询、插入和删除比较高效</td></tr><tr><td>LinkedHashMap</td><td>支持元素的排序</td></tr><tr><td>TreeMap</td><td>遍历有序的键值时非常高效、</td></tr><tr><td>Properties</td><td>一般用于操作属性文件</td></tr></tbody></table><blockquote><p>Map三种遍历方式</p></blockquote><ul><li>通过Map.keySet遍历key,通过key取出对应的value（比较常用，需要二次取值）</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String key : treeMap.keySet())&#123;</span><br><span class="line">    System.out.println(key + <span class="string">"--"</span> + treeMap.get(key));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>通过Map.entrySet使用迭代器遍历key和value（不常用，代码复杂）</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;Map.Entry&lt;String, Integer&gt;&gt; entrySet = treeMap.entrySet();</span><br><span class="line">Iterator&lt;Map.Entry&lt;String, Integer&gt;&gt; entrySetIt = entrySet.iterator();</span><br><span class="line"><span class="keyword">while</span>(entrySetIt.hasNext())&#123;</span><br><span class="line">    Map.Entry&lt;String, Integer&gt; entry = entrySetIt.next();</span><br><span class="line">    System.out.println(entry.getKey() + <span class="string">"--"</span> + entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>直接遍历Map.entrySet集合（容量大时，使用此方法）</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Entry&lt;String, Integer&gt; entry : treeMap.entrySet())&#123;</span><br><span class="line">    System.out.println(entry.getKey() + <span class="string">"--"</span> + entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;　　关于Collection框架的学习，在Java课程里面对于一些基础知识并不是很了解，尤其是对Collection框架基本没听过，借着这次寒假的Java学习好好学一些这个框架。&lt;/p&gt;
+&lt;img src=&quot;http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/109678/12/4776/330919/5e25dd05E50232686/cf7de3f63cff3d77.jpg&quot; alt=&quot;f7de3f63cff3d77.jpg&quot; style=&quot;zoom: 50%;&quot; /&gt;
+    
+    </summary>
+    
+    
+      <category term="Java学习" scheme="http://yoursite.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="-Collection框架" scheme="http://yoursite.com/tags/Collection%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习入门</title>
+    <link href="http://yoursite.com/2020/01/16/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2020/01/16/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%85%A5%E9%97%A8/</id>
+    <published>2020-01-16T08:49:19.000Z</published>
+    <updated>2020-01-20T17:24:49.543Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　深度学习之神经网络结构，梯度下降算法，及反向传播。</p><a id="more"></a><hr><h2 id="神经网络和多元一次函数的联系"><a href="#神经网络和多元一次函数的联系" class="headerlink" title="神经网络和多元一次函数的联系"></a>神经网络和多元一次函数的联系</h2><p>　　我认为多元一次函数就是一种神经网络。神经网络中：输入层-&gt;处理层-&gt;输出层，就相当于多元一次函数中：多个变量x经过函数得到结果y。</p><hr><h2 id="神经网络中的可训练参数"><a href="#神经网络中的可训练参数" class="headerlink" title="神经网络中的可训练参数"></a>神经网络中的可训练参数</h2><p>权重，偏置值</p><hr><h2 id="梯度下降的优势"><a href="#梯度下降的优势" class="headerlink" title="梯度下降的优势"></a>梯度下降的优势</h2><p>　　应该是简化了计算吧。最小二乘法就是直接求多元函数极值，求偏导，让偏导为零，解方程组，当变量有非常多个元素时，其计算量就变得非常大了，梯度下降法可以看作是解该方程组的简化，它只需要一个反复迭代的式子，沿着梯度下降，就可以求出其极值。</p><hr><h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><p>　　神经网络训练就是对权重和偏执值进行调整，直到到达一个最优结果，那么最初的权重和偏执值如何设定，都从零开始？</p><p>　　看了很多遍视频，还是看不懂，所以也没啥疑惑，只有不懂。。。</p><p>　　比如如何微调参数，梯度方向如何确定等</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;　　深度学习之神经网络结构，梯度下降算法，及反向传播。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的第一篇博客</title>
+    <link href="http://yoursite.com/2020/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2020/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
+    <published>2020-01-12T05:03:55.000Z</published>
+    <updated>2020-01-17T15:36:18.494Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　第一次写博客，还在学习使用markdown，边学边用吧。本人不是什么大牛，就是一个普通一本里面的普通学生，所以我写的博客也并不是什么高深技术探讨，多半是对知识的总结、对学习过程的感想，也会有一些实际操作的记录。</p><a id="more"></a><h2 id="为什么写博客"><a href="#为什么写博客" class="headerlink" title="为什么写博客"></a>为什么写博客</h2><p>　　想写博客这个东西，最初应该来自自己的虚荣心吧，当时看着好多大佬都在写博客，我也就想试试，虽然在内容上赶不上他们，不过在形式上跟他们同步吧，所以就打算在寒假正式开始我的博客之路。其次，我自身感受到写博客的重要性，在这一年半的大学生活中，安装了一些专业应用，配置过一些环境，不过随着时间的推移，大多数的步骤已经忘，用的时候又得去搜别人写得，很麻烦。然后，我觉得写博客也是对自己生活的一种记录吧，等多年以后，再回想过往，也不至于那么碌碌无为。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>　　哎，第一次写博客，一开始觉得有好多东西要写，可是写着写着就完了，卑微….。不过坚信写着写着就会好的，为自己加油！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;　　第一次写博客，还在学习使用markdown，边学边用吧。本人不是什么大牛，就是一个普通一本里面的普通学生，所以我写的博客也并不是什么高深技术探讨，多半是对知识的总结、对学习过程的感想，也会有一些实际操作的记录。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="-第一篇博客" scheme="http://yoursite.com/tags/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2020/01/11/hello-world/"/>
+    <id>http://yoursite.com/2020/01/11/hello-world/</id>
+    <published>2020-01-11T05:43:15.236Z</published>
+    <updated>2020-01-12T07:41:13.483Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>

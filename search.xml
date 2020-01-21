@@ -54,15 +54,8 @@
 <li>Map接口（图）：存储键/值对</li>
 <li>Collections：操作集合的工具类</li>
 </ul>
-<blockquote>
-<p>Collection架构：三种主要类型的集合</p>
-</blockquote>
-<ol>
-<li>Set(规则类)：存储一组不重复的元素</li>
-<li>List(线性表)：存储一个有序集合</li>
-<li>Queue(队列)：存储用先进先出方式处理的对象</li>
-</ol>
-<blockquote>
+<p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/106429/15/11149/14536/5e26f57dEd507bb53/45d0205b45e872ab.png" alt=""></p>
+<h2 id="Collection接口："><a href="#Collection接口：" class="headerlink" title="Collection接口："></a>Collection接口：</h2><blockquote>
 <p>Collection接口</p>
 </blockquote>
 <table>
@@ -121,7 +114,16 @@
 <td align="left">返回该集合元素构成的Object数组</td>
 </tr>
 </tbody></table>
-<h2 id="List定义与用法"><a href="#List定义与用法" class="headerlink" title="List定义与用法"></a>List定义与用法</h2><h2 id="Set定义与用法"><a href="#Set定义与用法" class="headerlink" title="Set定义与用法"></a>Set定义与用法</h2><h2 id="Map定义与用法"><a href="#Map定义与用法" class="headerlink" title="Map定义与用法"></a>Map定义与用法</h2><blockquote>
+<blockquote>
+<p>三种主要子类</p>
+</blockquote>
+<ol>
+<li>Set(规则类)：存储一组不重复的元素</li>
+<li>List(线性表)：存储一个有序集合</li>
+<li>Queue(队列)：存储用先进先出方式处理的对象</li>
+</ol>
+<p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/93364/28/11071/50049/5e26f726Eddd8eba4/e3c91e51833f020b.png" alt=""></p>
+<h3 id="List定义与用法"><a href="#List定义与用法" class="headerlink" title="List定义与用法"></a>List定义与用法</h3><h3 id="Set定义与用法"><a href="#Set定义与用法" class="headerlink" title="Set定义与用法"></a>Set定义与用法</h3><h2 id="Map定义与用法"><a href="#Map定义与用法" class="headerlink" title="Map定义与用法"></a>Map定义与用法</h2><blockquote>
 <p>以键-值存储元素的容器，根据关键字(key)找到对应的数据</p>
 </blockquote>
 <table>
