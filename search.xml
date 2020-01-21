@@ -41,7 +41,7 @@
   <entry>
     <title>Collection框架</title>
     <url>/2020/01/17/Collection%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　关于Collection框架的学习，在Java课程里面对于一些基础知识并不是很了解，尤其是对Collection框架基本没听过，借着这次寒假的Java学习好好学一些这个框架。</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　关于Collection框架的学习，在Java课程里面对于一些基础知识并不是很了解，尤其是对Collection框架基本没听过，借着这次寒假的Java学习好好学一下Java基础。</p>
 <img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/109678/12/4776/330919/5e25dd05E50232686/cf7de3f63cff3d77.jpg" alt="f7de3f63cff3d77.jpg" style="zoom: 50%;" />
 
 <a id="more"></a>
@@ -55,8 +55,11 @@
 <li>Collections：操作集合的工具类</li>
 </ul>
 <p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/106429/15/11149/14536/5e26f57dEd507bb53/45d0205b45e872ab.png" alt=""></p>
+<blockquote>
+<p>注意：集合框架中所有的具体类都实现了Cloneable和Serializabel接口，即他们的实例都是可复制且可序列化的。</p>
+</blockquote>
 <h2 id="Collection接口："><a href="#Collection接口：" class="headerlink" title="Collection接口："></a>Collection接口：</h2><blockquote>
-<p>Collection接口</p>
+<p>Collection接口：</p>
 </blockquote>
 <table>
 <thead>
@@ -123,6 +126,9 @@
 <li>Queue(队列)：存储用先进先出方式处理的对象</li>
 </ol>
 <p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/93364/28/11071/50049/5e26f726Eddd8eba4/e3c91e51833f020b.png" alt=""></p>
+<blockquote>
+<p>注意：Collection是集合最高接口，但是直接使用Collection接口会造成操作意义不明确，所以在实际开发中不直接使用Collection接口</p>
+</blockquote>
 <h3 id="List定义与用法"><a href="#List定义与用法" class="headerlink" title="List定义与用法"></a>List定义与用法</h3><h3 id="Set定义与用法"><a href="#Set定义与用法" class="headerlink" title="Set定义与用法"></a>Set定义与用法</h3><h2 id="Map定义与用法"><a href="#Map定义与用法" class="headerlink" title="Map定义与用法"></a>Map定义与用法</h2><blockquote>
 <p>以键-值存储元素的容器，根据关键字(key)找到对应的数据</p>
 </blockquote>
