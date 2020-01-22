@@ -118,7 +118,7 @@
 </tr>
 </tbody></table>
 <blockquote>
-<p>三种主要子类</p>
+<p>三种主要子接口</p>
 </blockquote>
 <ol>
 <li>Set(规则类)：存储一组不重复的元素</li>
@@ -129,7 +129,65 @@
 <blockquote>
 <p>注意：Collection是集合最高接口，但是直接使用Collection接口会造成操作意义不明确，所以在实际开发中不直接使用Collection接口</p>
 </blockquote>
-<h3 id="List定义与用法"><a href="#List定义与用法" class="headerlink" title="List定义与用法"></a>List定义与用法</h3><h3 id="Set定义与用法"><a href="#Set定义与用法" class="headerlink" title="Set定义与用法"></a>Set定义与用法</h3><h2 id="Map定义与用法"><a href="#Map定义与用法" class="headerlink" title="Map定义与用法"></a>Map定义与用法</h2><blockquote>
+<h3 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h3><blockquote>
+<p>具有索引的List接口</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public void add(int index, E element)</td>
+<td>在指定位置增加元素</td>
+</tr>
+<tr>
+<td>public boolean addAll(int index, E element)</td>
+<td>在指定位置增加一组元素</td>
+</tr>
+<tr>
+<td>E get(int index)</td>
+<td>返回指定位置元素</td>
+</tr>
+<tr>
+<td>public int indexOf(Object o)</td>
+<td>查找指定元素的位置</td>
+</tr>
+<tr>
+<td>public int lastindex Of(Object o)</td>
+<td>从后往前查找指定元素的位置</td>
+</tr>
+<tr>
+<td>public Listlterator<E> listlterator()</td>
+<td>获得List迭代器对象(可以在指定位置向前或向后访问，可以修改集合中的元素)</td>
+</tr>
+<tr>
+<td>public E remove(int index)</td>
+<td>删除指定位置的元素</td>
+</tr>
+<tr>
+<td>public List<E> subList(int fromlndex, int tolndex)</td>
+<td>取出集合中的子集合</td>
+</tr>
+<tr>
+<td>public E set(int index, E element)</td>
+<td>替换指定位置的元素</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>List接口下的三个实现类</p>
+</blockquote>
+<ul>
+<li>ArrayList –数组线性表，是一个大小可变的数组，在内存中分配连续的空间，遍历元素和随机访问元素的效率比较高。</li>
+<li>LinkedList –链表，采用链表存储方式，提供从线性表两端提取、插入和删除元素的方法，插入、删除元素效率比较高。</li>
+<li></li>
+</ul>
+<blockquote>
+<p>List接口扩展了Collection接口的方法，这些方法使用起来比父接口更加方便，要使用List接口，需要对List接口的实现类实例化</p>
+</blockquote>
+<h3 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h3><h2 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h2><blockquote>
 <p>以键-值存储元素的容器，根据关键字(key)找到对应的数据</p>
 </blockquote>
 <table>
