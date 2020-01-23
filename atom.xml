@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-23T15:35:22.575Z</updated>
+  <updated>2020-01-23T16:57:22.981Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nihao</title>
+    <link href="http://yoursite.com/2020/01/24/nihao/"/>
+    <id>http://yoursite.com/2020/01/24/nihao/</id>
+    <published>2020-01-23T16:55:55.000Z</published>
+    <updated>2020-01-23T16:57:22.981Z</updated>
+    
+    <content type="html"><![CDATA[<p>ofhsogf ewfdsfsdfsdf</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ofhsogf ewfdsfsdfsdf&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Java学习————作业三（寒假）</title>
@@ -44,7 +67,7 @@
     <link href="http://yoursite.com/2020/01/17/Collection%E6%A1%86%E6%9E%B6/"/>
     <id>http://yoursite.com/2020/01/17/Collection%E6%A1%86%E6%9E%B6/</id>
     <published>2020-01-17T12:12:45.000Z</published>
-    <updated>2020-01-23T09:10:50.308Z</updated>
+    <updated>2020-01-23T17:24:51.840Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　有了数组为什么还需要集合框架? 为了适应实际开发过程中,保存动态变化的数据集合,而数组一旦定义,长度将不能变化,于是就有我么动态增长的集合框架.</p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/109678/12/4776/330919/5e25dd05E50232686/cf7de3f63cff3d77.jpg" alt="f7de3f63cff3d77.jpg" style="zoom: 50%;" /><a id="more"></a><h2 id="集合框架介绍"><a href="#集合框架介绍" class="headerlink" title="集合框架介绍"></a>集合框架介绍</h2><blockquote><p>一组存储对象的容器（动态）</p></blockquote><ul><li>Collection接口：存储另一个元素的集合</li><li>Collections：操作集合的工具类</li><li>Map接口（图）：存储键/值对</li></ul><p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/106429/15/11149/14536/5e26f57dEd507bb53/45d0205b45e872ab.png" alt=""></p><blockquote><p>注意：集合框架中所有的具体类都实现了Cloneable和Serializabel接口，即他们的实例都是可复制且可序列化的。</p></blockquote><h2 id="Collection接口："><a href="#Collection接口：" class="headerlink" title="Collection接口："></a>Collection接口：</h2><blockquote><p>Collection接口：</p></blockquote><table><thead><tr><th align="left">方法</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">boolean add(E e);</td><td align="left">向集合中添加元素</td></tr><tr><td align="left">int size();</td><td align="left">返回集合中的元素个数</td></tr><tr><td align="left">void clear();</td><td align="left">删除集合中的所有元素</td></tr><tr><td align="left">boolean remove(Object o);</td><td align="left">从集合删除元素o</td></tr><tr><td align="left">boolean removeAll(Collection&lt;?&gt; c);</td><td align="left">从集合中删除集合c中的所有元素</td></tr><tr><td align="left">boolean retainAll(Collection&lt;?&gt; c);</td><td align="left">保留c和该集合都有的元素（交集）</td></tr><tr><td align="left">boolean addAll(Collection&lt;? extends E&gt; c);</td><td align="left">将集合c中所有元素添加到当前这个集合</td></tr><tr><td align="left">boolean contains(Object o);</td><td align="left">如果该集合包含对象o,返回true</td></tr><tr><td align="left">boolean containsAll(Collection&lt;?&gt; c);</td><td align="left">如果该集合中包含集合c中所有元素，返回true</td></tr><tr><td align="left">boolean isEmpty();</td><td align="left">如果集合不包含任何元素，则返回true</td></tr><tr><td align="left">Iterator<E> iterator();</td><td align="left">返回该集合中元素所有的迭代器</td></tr><tr><td align="left">Object[] toArray();</td><td align="left">返回该集合元素构成的Object数组</td></tr></tbody></table><blockquote><p>三种主要子接口</p></blockquote><ol><li>Set(规则类)：存储一组不重复的元素</li><li>List(线性表)：存储一个有序集合</li><li>Queue(队列)：存储用先进先出方式处理的对象</li></ol><p><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/93364/28/11071/50049/5e26f726Eddd8eba4/e3c91e51833f020b.png" alt=""></p><blockquote><p>注意：Collection是集合最高接口，但是直接使用Collection接口会造成操作意义不明确，所以在实际开发中不直接使用Collection接口</p></blockquote><h3 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h3><blockquote><p>具有索引的List接口</p></blockquote><table><thead><tr><th>方法</th><th>描述</th></tr></thead><tbody><tr><td>public void add(int index, E element)</td><td>在指定位置增加元素</td></tr><tr><td>public boolean addAll(int index, E element)</td><td>在指定位置增加一组元素</td></tr><tr><td>E get(int index)</td><td>返回指定位置元素</td></tr><tr><td>public int indexOf(Object o)</td><td>查找指定元素的位置</td></tr><tr><td>public int lastindex Of(Object o)</td><td>从后往前查找指定元素的位置</td></tr><tr><td>public Listlterator<E> listlterator()</td><td>获得List迭代器对象(可以在指定位置向前或向后访问，可以修改集合中的元素)</td></tr><tr><td>public E remove(int index)</td><td>删除指定位置的元素</td></tr><tr><td>public List<E> subList(int fromlndex, int tolndex)</td><td>取出集合中的子集合</td></tr><tr><td>public E set(int index, E element)</td><td>替换指定位置的元素</td></tr></tbody></table><blockquote><p>List接口下的三个实现类</p></blockquote><ul><li>ArrayList –数组线性表，是一个大小可变的数组，在内存中分配连续的空间，遍历元素和随机访问元素的效率比较高。</li><li>LinkedList –链表，采用链表存储方式，提供从线性表两端提取、插入和删除元素的方法，插入、删除元素效率比较高。</li></ul><blockquote><p>List接口扩展了Collection接口的方法，这些方法使用起来比父接口更加方便，要使用List接口，需要对List接口的实现类实例化</p></blockquote><h3 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h3><blockquote><p>用来操作存储一组唯一,无序的对象    v </p></blockquote><blockquote><p>Set接口下的三个实现类</p></blockquote><ul><li>HashSet – 用来存储互不相同的任何元素</li><li>LinkedHashSet – 使用链表扩展实现HashSet类,支持对元素的排序</li><li>TreeSet – 可以确保所有元素是有序的</li></ul><h3 id="Queue接口"><a href="#Queue接口" class="headerlink" title="Queue接口"></a>Queue接口</h3><blockquote><p>通常用于操作一组队列方式的对象信息(一般存储方式为先进先出)</p></blockquote><table><thead><tr><th>方法</th><th>描述</th></tr></thead><tbody><tr><td>boolean offer(element)</td><td>向队列中插入一个元素(类型add方法)</td></tr><tr><td>E poll()</td><td>获取并删除队列头元素,如果队列为空返回null</td></tr><tr><td>E remove()</td><td>获取并删除队列头元素,如果队列为空抛出异常</td></tr><tr><td>E peek()</td><td>获取但不删除列头元素,如果队列为空返回null</td></tr><tr><td>E element()</td><td>获取但不删除列头头元素,如果队列为空抛出异常</td></tr></tbody></table><blockquote><p>主要实现子类</p></blockquote><ul><li>PriorityQueue 优先队列，最小值拥有优先级最先删除。</li><li>ArrayQueue 双端队列，集合容量可动态扩展</li></ul><blockquote><p>注意:</p><p>1.Deque支持在两端插入和删除元素,是双端队列的简称(double-ended queue),支持从两端操作队列的元素</p><p>2.定义的方法:addFirst(e), removeFirst(e), addLast(e), removeLast(e), getFirst()/getLast()</p></blockquote><h2 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h2><blockquote><p>以键-值存储元素的容器，根据关键字(key)找到对应的数据</p></blockquote><table><thead><tr><th align="left">方法</th><th>描述</th></tr></thead><tbody><tr><td align="left">V put(key,value)</td><td>将一个键/值映射放入图中</td></tr><tr><td align="left">V get(key)</td><td>根据键获取对应的value值</td></tr><tr><td align="left">Set<K> keySet()</td><td>返回包含键的规则集</td></tr><tr><td align="left">Collection<V> values()</td><td>返回包含值得集合</td></tr><tr><td align="left">boolean containsKey(key)</td><td>返回图中是否包含键值key</td></tr><tr><td align="left">Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</td><td>返回一个图中包含条目的规则集</td></tr><tr><td align="left">int size()</td><td>返回途中的键值对个数</td></tr><tr><td align="left">V remove(key)</td><td>删除指定键对应的条目</td></tr></tbody></table><blockquote><p>其主要子类及其用途</p></blockquote><table><thead><tr><th>子类</th><th>描述</th></tr></thead><tbody><tr><td>HashMap</td><td>查询、插入和删除比较高效</td></tr><tr><td>LinkedHashMap</td><td>支持元素的排序</td></tr><tr><td>TreeMap</td><td>遍历有序的键值时非常高效、</td></tr><tr><td>Properties</td><td>一般用于操作属性文件</td></tr></tbody></table><blockquote><p>Map三种遍历方式</p></blockquote><ul><li>通过Map.keySet遍历key,通过key取出对应的value（比较常用，需要二次取值）</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String key : treeMap.keySet())&#123;</span><br><span class="line">    System.out.println(key + <span class="string">"--"</span> + treeMap.get(key));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>通过Map.entrySet使用迭代器遍历key和value（不常用，代码复杂）</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;Map.Entry&lt;String, Integer&gt;&gt; entrySet = treeMap.entrySet();</span><br><span class="line">Iterator&lt;Map.Entry&lt;String, Integer&gt;&gt; entrySetIt = entrySet.iterator();</span><br><span class="line"><span class="keyword">while</span>(entrySetIt.hasNext())&#123;</span><br><span class="line">    Map.Entry&lt;String, Integer&gt; entry = entrySetIt.next();</span><br><span class="line">    System.out.println(entry.getKey() + <span class="string">"--"</span> + entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>直接遍历Map.entrySet集合（容量大时，使用此方法）</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Entry&lt;String, Integer&gt; entry : treeMap.entrySet())&#123;</span><br><span class="line">    System.out.println(entry.getKey() + <span class="string">"--"</span> + entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
