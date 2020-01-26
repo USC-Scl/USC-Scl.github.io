@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-26T11:23:38.385Z</updated>
+  <updated>2020-01-26T12:15:18.949Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="http://yoursite.com/2020/01/26/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
     <id>http://yoursite.com/2020/01/26/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</id>
     <published>2020-01-26T09:34:40.000Z</published>
-    <updated>2020-01-26T11:23:38.385Z</updated>
+    <updated>2020-01-26T12:15:18.949Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe src="//player.bilibili.com/player.html?aid=74624265&cid=127641389&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><a id="more"></a><iframe src="//player.bilibili.com/player.html?aid=74624265&cid=127641389&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p><video data-a-fdc886ec="" src="https://baikevideo.cdn.bcebos.com/media/mda-O9C7gVGwqTr85ead/d29dd2dce818aa03a15b0e66ebf56fe6.mp4" controls="controls" preload="" class="wenda-abstract-video"></video></p><iframe width="560" height="315" src="https://www.youtube.com/embed/XHNQ6fwMf3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;
     
     </summary>
     
