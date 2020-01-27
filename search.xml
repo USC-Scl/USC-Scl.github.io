@@ -3,19 +3,9 @@
   <entry>
     <title>函数式编程</title>
     <url>/2020/01/26/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><a id="more"></a>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe src="//player.bilibili.com/player.html?aid=85231547&cid=145705796&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-<iframe 
-    height=468 width=1280
-    src="//f.video.weibocdn.com/001ye3CVlx07yqIY0uME01041204Cknl0E020.mp4?label=mp4_720p&amp;template=1280x720.25.0&amp;trans_finger=11ccc9c970f47cffd9369c72510b3033&amp;Expires=1580047127&amp;ssig=%2F1CgOfq8u0&amp;KID=unistore,video" 
-    frameborder=0 allowfullscreen>
-</iframe>
-
-<iframe 
-    height=300 width=510 
-    src="//player.bilibili.com/player.html?aid=74624265&cid=127641389&page=1" 
-    frameborder=0 allowfullscreen>
-</iframe>]]></content>
+<a id="more"></a>]]></content>
   </entry>
   <entry>
     <title>Java学习————作业三（寒假）</title>
