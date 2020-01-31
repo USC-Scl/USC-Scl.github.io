@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>流式编程</title>
+    <url>/2020/01/30/%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
+    <title>20184350135 沈春龙 作业四</title>
+    <url>/2020/01/29/20184350135%20%E6%B2%88%E6%98%A5%E9%BE%99%20%E4%BD%9C%E4%B8%9A%E5%9B%9B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>第一题：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> Stream_API;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Stream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CharCout</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mian</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String str = <span class="string">"Your。future：depends#@￥on your dreams,so go to sleep."</span>;</span><br><span class="line">		Stream.of(str.replaceAll(<span class="string">"[^a-zA-Z]"</span>, <span class="string">""</span>).split(<span class="string">""</span>)).collect(Collectors.groupingBy(x-&gt; x)).forEach((a,b)-&gt;  System.out.println(a+<span class="string">"="</span>+b.size()));	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二题：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> Collection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Stream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCount2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		InputStream inputStream = WordCount.class.getResourceAsStream("work.txt");</span><br><span class="line">		BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(inputStream));</span><br><span class="line">		</span><br><span class="line">		br.lines().flatMap(x-&gt; Stream.of(x.replaceAll(<span class="string">"\\pP"</span>, <span class="string">" "</span>).split(<span class="string">" "</span>))).map(String::toLowerCase).filter(x-&gt;x!=<span class="string">"a"</span>||x!=<span class="string">"the"</span>).distinct().sorted().forEach(System.out::println);</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>函数式编程</title>
     <url>/2020/01/26/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>　　函数式编程是一种编程方式，它将电脑运算视为函数的计算。函数编程语言最重要的基础是λ演算（lambda calculus），而且λ演算的函数可以接受函数当作输入（参数）和输出（返回值）。简单说，”函数式编程”是一种<a href="http://en.wikipedia.org/wiki/Programming_paradigm" target="_blank" rel="noopener">“编程范式”</a>（programming paradigm），也就是如何编写程序的方法论。它属于<a href="http://en.wikipedia.org/wiki/Structured_programming" target="_blank" rel="noopener">“结构化编程”</a>的一种，主要思想是把运算过程尽量写成一系列嵌套的函数调用。</p>
@@ -11,7 +27,7 @@
 咱们先不管哪些啥定义的，先了解函数式编程到底怎么用呢？下面给出一个面试题：
 
 <blockquote>
-<p>统计文本中的单词个数，请用尽可能简练的代码使用Java语言来实现。</p>
+<p>统计文本中的单词个数，请用尽可能简练的代码使用Java语言来实现，形式如下：</p>
 </blockquote>
 <img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/96954/38/11220/23325/5e2ee9e4E831594ca/cede047e902cd3be.png" style="zoom: 80%;" />
 
