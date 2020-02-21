@@ -492,7 +492,8 @@
 <td></td>
 </tr>
 </tbody></table>
-]]></content>
+<h2 id="1-1计算机网络"><a href="#1-1计算机网络" class="headerlink" title="1.1计算机网络"></a>1.1计算机网络</h2><p>　　定义：由<strong>通信信道</strong>连接的<strong>主机</strong>和<strong>网络设备</strong>的集合，以方便用户<strong>共享资源</strong>和<strong>相互通信</strong><br>　　主要特征：”通用性”</p>
+<h2 id="1-2因特网的结构"><a href="#1-2因特网的结构" class="headerlink" title="1.2因特网的结构"></a>1.2因特网的结构</h2><h2 id="1-3协议分层与服务模型"><a href="#1-3协议分层与服务模型" class="headerlink" title="1.3协议分层与服务模型"></a>1.3协议分层与服务模型</h2><h2 id="1-4分组交换网的性能指标"><a href="#1-4分组交换网的性能指标" class="headerlink" title="1.4分组交换网的性能指标"></a>1.4分组交换网的性能指标</h2><h2 id="1-5计算机网络简史"><a href="#1-5计算机网络简史" class="headerlink" title="1.5计算机网络简史"></a>1.5计算机网络简史</h2>]]></content>
       <categories>
         <category>Java学习</category>
       </categories>
@@ -894,6 +895,17 @@
 <p>　　看了很多遍视频，还是看不懂，所以也没啥疑惑，只有不懂。。。</p>
 <p>　　比如如何微调参数，梯度方向如何确定等</p>
 ]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>-神经网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习入门</title>
+    <url>/2020/01/16/%E7%BD%91%E7%BB%9C%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       <categories>
         <category>深度学习</category>
       </categories>
